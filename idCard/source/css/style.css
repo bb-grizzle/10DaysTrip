@@ -1,0 +1,159 @@
+/* to change
+.thumnail
+#name
+.roll
+#phoneNumber
+#email
+#link-insta
+#link-facebook */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* font */
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* color */
+.blackColor{
+    color: black;
+}
+.mainColor{
+    color: rgb(91, 64, 240);
+}
+.mainBgColor{
+    background-color: rgb(91, 64, 240);
+}
+.subColor{
+    color: #585858;
+}
+
+.thumnail{
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sec-main{
+    /* border: 1px solid black; */
+    padding: 16px;
+    border-radius: 20px;
+    margin-top: -20px;
+    background-color: white;
+    
+}
+
+.project-title{
+    font-weight: bolder;
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+.project-discript{
+    font-size: 9pt;
+    line-height: 1.9;
+}
+
+
+.sec-info{
+    padding: 16px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+}
+
+.info-profile{
+    padding: 12px 0 0 0;
+}
+
+.info-profile h3{
+    font-size: 10pt;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'bitstream_vera_sans_monoroman';
+}
+
+.info-profile ul::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.info-profile li{
+    font-size: 8pt;
+    /* border: 1px solid black; */
+    line-height: 1.6;
+    float: left;
+    color: white;
+    padding: 2px 8px;
+    margin-right: 4px;
+    border-radius: 4px;
+}
+
+/* info-contact */
+.info-contact{
+    padding: 16px 0;
+    /* margin-bottom: 10px; */
+}
+
+.info-contact h3{
+    font-size: 9pt;
+    margin-bottom: 10px;
+    font-family: 'bitstream_vera_sans_monoroman';
+}
+.basicInfo{
+    margin-bottom: 0;
+}
+.basicInfo li{
+    line-height: 1.8;
+    font-size: 9pt;
+}
+.basicInfo li::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tb-head{
+    width: 80px;
+    font-weight: 400;
+}
+.basicInfo p{
+    float: left;
+}
+
+.infoLink{
+    padding-top: 12px;
+}
+.infoLink::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.infoLink li{
+    float: right;
+    margin-left: 8px;
+
+}
+
+.infoLink a{
+    display: inline-block;
+    
+}
+.infoLink ion-icon{
+    font-size: 24pt;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}

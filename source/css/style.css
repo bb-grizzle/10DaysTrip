@@ -1,0 +1,625 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+    /* font size */
+    font-size: 16pt;
+    box-sizing: border-box;
+}
+
+body {
+    /* font */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #3B3B3B;
+
+    overflow: hidden;
+    /* background */
+    background-image: url(../img/hip-square.png);
+    cursor: auto;
+}
+
+.tran01 {
+    transition: all .5s ease-out;
+}
+
+.tran02 {
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+.tran03 {
+    transition: all .5s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+.tran04{
+    transition: all 1s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+
+.fillBg {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: #000; */
+
+    background: rgb(3, 20, 98);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(3, 20, 98, 1) 0%, rgba(145, 90, 130, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(3, 20, 98, 1) 0%, rgba(145, 90, 130, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(3, 20, 98, 1) 0%, rgba(145, 90, 130, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#031462', endColorstr='#915a82', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+
+    opacity: 0;
+    mix-blend-mode: overlay;
+}
+
+.bgStar {
+    /* 8~15 */
+    /* width: 15px;
+    height: 15px;
+    top: 300px;
+    left: 300px; */
+
+    position: absolute;
+    background-color: #F9FFB0;
+    border-radius: 100%;
+}
+
+
+/* color */
+.mainColor {
+    color: #FF6D24;
+    transition: all .5s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+.mainBg {
+    background-color: #FF6D24;
+}
+
+.subColor {
+    color: black;
+    transition: all .5s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+.textColor {
+    color: #606060;
+    transition: all .5s cubic-bezier(0.42, 0, 0.18, 0.99);
+}
+
+
+
+.con {
+    width: 80%;
+    margin: auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    line-height: 54px;
+
+}
+
+.header-wrap {
+    display: flow-root;
+}
+
+.header-logo {
+    font-family: 'Pacifico', cursive;
+    /* color: #FF6D24; */
+    pointer-events: none;
+    ;
+    user-select: none;
+}
+
+.header-about-wrap {
+    float: right;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    height: 54px;
+}
+
+.header-about {
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    color: #3B3B3B;
+}
+
+/* section - contents */
+.sec-contents {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    user-select: none;
+    pointer-events: none;
+
+
+}
+
+.ctry-wrap {
+    display: inline-block;
+    width: 500px;
+    /* border: 2px solid black; */
+
+    /* overflow: hidden; */
+    user-select: none;
+    pointer-events: none;
+    ;
+}
+
+.countryTitle-wrap {
+    display: flow-root;
+    width: 1500px;
+
+
+}
+
+.sec-country {
+    font-weight: 200;
+    font-style: italic;
+    font-size: 70pt;
+    line-height: 1;
+    user-select: none;
+    float: left;
+    /* margin-bottom: 40px; */
+    /* margin-right: 40px; */
+    width: 500px;
+}
+
+.colorPalette-wrap {
+    display: flow-root;
+    width: 1500px;
+
+}
+
+
+.colorPalette {
+    margin: 40px 0;
+    width: 500px;
+    float: left;
+}
+
+.colorPalette {
+    display: flow-root;
+}
+
+.colorPalette li {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    background-color: black;
+    /* border-radius: 100%; */
+
+    float: left;
+    box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.438);
+}
+
+/* 
+.colorPalette-items{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    background-color: black;
+    border-radius: 100%;
+    float: left;
+    box-shadow: 2px 2px 4px rgba(100, 100, 100, 0.438);
+} */
+
+.sec-text {
+    display: flow-root;
+}
+
+.citys-container {
+    width: 160px;
+    display: flow-root;
+    float: left;
+}
+
+.citys-wrap {
+    width: 480px;
+    display: flow-root;
+
+}
+
+.citys {
+    font-weight: 200;
+    float: left;
+    margin-right: 50px;
+    width: 110px;
+}
+
+.citys li:first-of-type {
+    font-weight: 700;
+}
+
+.citys li {
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+.duration-containerWrap {
+    display: flow-root;
+    width: 160px;
+}
+
+.duration-container {
+    width: 500px;
+    display: flow-root;
+
+}
+
+.duration-wrap {
+    float: left;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 110px;
+    margin-right: 50px;
+}
+
+.duration-wrap p {
+    font-size: 12pt;
+}
+
+.checkOverflow {
+    overflow: hidden;
+}
+
+/* illust */
+
+/* illust guide */
+.illust-guide {
+    /*		border: 3px solid black;*/
+    position: absolute;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.guide-h {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.h-line {
+    width: 300px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.guide-v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+}
+
+.v-line {
+    height: 300px;
+    width: 1px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+/* 
+.guide-h{
+    width: 200px;
+}
+.guide-v{
+    height: 200px;
+}
+ */
+
+
+/* illust work */
+.section-illust {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+
+.illust-border {
+    width: 190px;
+    height: 190px;
+
+    background-color: white;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.178);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    pointer-events: none;
+    /* opacity: 0.5; */
+}
+
+.illust-wrap {
+    width: 180px;
+    height: 180px;
+    /* max-width: 210px;
+    max-height: 210px; */
+    border-radius: 100%;
+    overflow: hidden;
+    /* border: 2px solid black; */
+
+    position: relative;
+    text-align: center;
+    pointer-events: none;
+    ;
+
+}
+
+.illust {
+    /* transform: translate(-35px, -35px); */
+    /* position: absolute; */
+    /* opacity: 0.5; */
+    /* border: 2px solid black; */
+
+    /* center align */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 900px;
+    height: 300px;
+
+    cursor: pointer;
+}
+
+.illust ul {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    float: left;
+    border: 2px solid white;
+
+    left: 300px;
+
+}
+
+.illustImage {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.day {
+    opacity: 1;
+}
+
+.night {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.illust-daysky {
+    background-image: url(../img/illust01-d-01.png);
+}
+
+.illust-nightsky {
+    background-image: url(../img/illust01-n-01.png);
+}
+
+
+.illust-croatia-day {
+    background-image: url(../img/illust01-d-02.png);
+}
+
+.illust-croatia-night {
+    background-image: url(../img/illust01-n-02.png);
+}
+
+.illust-swiss-day {
+    background-image: url(../img/illust02-d-02.png);
+}
+
+.illust-swiss-night {
+    background-image: url(../img/illust02-n-02.png);
+}
+
+.illust-italy-day {
+    background-image: url(../img/illust03-d-02.png);
+}
+
+.illust-italy-night {
+    background-image: url(../img/illust03-n-02.png);
+}
+
+
+.illust-sun {
+    background-image: url(../img/sunRotate.png);
+    /* transform: rotate(180deg); */
+    transition: all .6s cubic-bezier(.42, 0, .32, .99);
+}
+
+.illust-star {
+    background-image: url(../img/stars.png);
+}
+
+.showPotoBtn-wrap {}
+
+#showPhotoBtn {
+    font-size: 40pt;
+    position: fixed;
+    z-index: 10;
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+#showPhotoBtn:hover {
+    font-size: 50pt;
+}
+
+#hidePhotoBtn:hover {
+    font-size: 50pt;
+}
+
+
+/* showphoto */
+/* to change */
+/* 
+.sec-contents{
+    display: none;
+}
+.section-illust{
+    display: none;
+} */
+
+.hidePhotoBtn-wrap {
+    position: fixed;
+}
+
+#hidePhotoBtn {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    left: -60px;
+    transform: rotate(180deg);
+
+}
+
+.sec-photo {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    top: 100px;
+}
+
+.photo-bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.photo-header {}
+
+.photo-header h1 {
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32pt;
+    margin-bottom: 16px;
+}
+
+.photo-header p {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    width: 70%;
+    line-height: 1.6;
+}
+
+.photo-header .photo-header-textko {
+    line-height: 1.8;
+    font-size: 10pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* photo list */
+.photo-list {
+    display: flow-root;
+}
+
+.photo-list-wrap {
+    position: relative;
+    top: 220px;
+    z-index: 1;
+    display: flow-root;
+}
+
+.photo-list li {
+    box-sizing: border-box;
+    float: left;
+    width: 33.3%;
+    height: 300px;
+    padding: 10px;
+
+
+}
+
+.list-padding {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+footer {
+    padding: 40px 0;
+}
+
+footer p {
+    font-size: 10pt;
+    color: black;
+    text-align: left;
+    font-weight: lighter;
+    opacity: 0.8;
+}
+
+/* before event */
+.sec-photo {
+    display: none;
+    opacity: 0;
+
+}
+
+.photo-list-wrap {
+    top: 100vh;
+
+}
+
+.photo-bg {
+    height: 0;
+
+
+}
