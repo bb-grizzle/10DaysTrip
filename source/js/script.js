@@ -511,15 +511,11 @@ function showPhoto() {
 	secIllust.style.opacity = "0";
 	showPhotoBtn.style.opacity = "0";
 
-	// secContents.style.display = "none";
-	// secIllust.style.display = "none";
-
 	var secPhoto = document.querySelector(".sec-photo");
 	var photoListWrap = document.querySelector(".photo-list-wrap");
-	// var photoBg = document.querySelector(".photo-bg");
 
 	secPhoto.style.display = "block";
-	document.body.style.overflow = "auto";
+	// document.body.style.overflow = "auto";
 	setTimeout(() => {
 
 		secPhoto.style.opacity = "1";
@@ -562,7 +558,7 @@ function hidePhoto() {
 	}, 300);
 
 	scrollTop();
-	document.body.style.overflow = "hidden";
+	// document.body.style.overflow = "hidden";
 }
 
 function preventIllustScroll(status) {
@@ -573,7 +569,6 @@ function preventIllustScroll(status) {
 // on mouse scroll
 window.addEventListener("wheel", function () {
 	scrollBg();
-
 });
 
 function scrollBg() {
