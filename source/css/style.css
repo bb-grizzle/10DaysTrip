@@ -452,7 +452,7 @@ header {
 	text-align: center;
 	
 	pointer-events: none;
-	overflow: hidden;
+	-webkit-mask-image: -webkit-linear-gradient(white,black);
 }
 
 .illust {
@@ -535,6 +535,11 @@ header {
 	background-image: url(../img/sunRotate.png);
 	/* transform: rotate(180deg); */
 	transition: all .6s cubic-bezier(.42, 0, .32, .99);
+
+	/* to delete */
+	box-sizing: border-box;
+	border-radius: 100%;
+	
 }
 
 .illust-star {

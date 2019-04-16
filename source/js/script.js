@@ -1,3 +1,6 @@
+// todelete
+// document.addEventListener('touchstart', changeNight);
+
 // getStart
 window.onload = function () {
 	fillCountry();
@@ -357,6 +360,7 @@ var isCityMove = false;
 function changeNight() {
 	removeStars();
 	fillStars();
+	
 	var night = document.querySelectorAll(".night");
 	for (var i = 0; i < night.length; i++) {
 		night[i].style.opacity = "1";
@@ -390,6 +394,8 @@ function changeDay() {
 	for (var i = 0; i < night.length; i++) {
 		night[i].style.opacity = "0";
 	}
+
+	// to fix
 
 	var sun = document.querySelectorAll(".illust-sun");
 	sundeg = 0;
@@ -438,6 +444,7 @@ function checkDir() {
 	}
 }
 
+// to delete
 function changeCitys() {
 	var title = document.querySelector(".countryTitle-wrap");
 	title.style.marginLeft = move01 + "%"; //500
@@ -450,9 +457,12 @@ function changeCitys() {
 
 	var duration = document.querySelector(".duration-container");
 	duration.style.marginLeft = move01 + "%"; //500
+}
 
+function changeCityIllust(){
 	var illustarr = document.querySelectorAll(".illustArr");
 	for (var i = 0; i < illustarr.length; i++) {
+		// illustarr[i].style.left = testMove + "%";
 		illustarr[i].style.left = move02 + "%";
 	}
 }
@@ -474,6 +484,7 @@ function moveCitys() {
 	if (isOnIllust && !isPhotoView) {
 		checkDir();
 		changeCitys();
+		changeCityIllust();
 		changeMainColor();
 		isCityMove = false;
 
