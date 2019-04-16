@@ -1,6 +1,8 @@
 var isTouch = false;
+var changeSky = false;
 
 document.ontouchstart = function (e) {
+
 	isTouch = true;
 
 	var touch_x = e.touches[0].clientX;
@@ -9,29 +11,34 @@ document.ontouchstart = function (e) {
 	const mdx = center_w - touch_x;
 	const mdy = center_h - touch_y;
 
-
 	if (Math.abs(mdx) < 90 && Math.abs(mdy) < 90) {
 		isOnIllust = true;
-		console.log("true");
-
 	} else {
 		isOnIllust = false;
-		console.log("false");
 	}
+
 }
 
 
-document.ontouchend = function () {
+document.ontouchend = function (e) {
 	isTouch = false;
-	console.log("ontouchend: ");
+	console.log("isPhotoView : " + isPhotoView);
+	console.log("isOnIllust : " + isOnIllust);
+	console.log("changeSky : " + changeSky);
+	console.log("-- ");
+	
+
 	if (!isPhotoView && isOnIllust) {
 
-		if (!isSkyNight && changeStatus) {
+		if (!changeSky && !isCityMove) {
 			changeNight();
-		} else if (isSkyNight && changeStatus) {
+		} else if(changeSky && !isCityMove){
 			changeDay();
 		}
+
+		changeSky = !changeSky;
 	}
+
 	if (isCityMove) {
 		moveCitys();
 	}
@@ -48,10 +55,10 @@ document.ontouchend = function () {
 		illust_border.style.width = "150px";
 		illust_border.style.height = "150px";
 	} else {
-
 		illust_border.style.width = "190px";
 		illust_border.style.height = "190px";
 	}
+
 }
 
 
@@ -61,7 +68,6 @@ document.ontouchmove = function (e) {
 
 	hideGuideline();
 	drawGuideline();
-	console.log("isTouch : " + isTouch);
 
 	const touch_x = e.touches[0].clientX;
 	const touch_y = e.touches[0].clientY;
@@ -70,20 +76,8 @@ document.ontouchmove = function (e) {
 	const mdy = center_h - touch_y;
 	var md = Math.round(Math.sqrt(Math.pow(mdx, 2) + Math.pow(mdy, 2)));
 
-	console.log("mdx : " + mdx);
-	console.log("mdy : " + mdy);
-
 	if (isTouch) {
 		var illust_border = document.querySelector(".illust-border");
-		if (mdy > y_lim) {
-			isSkyNight = true;
-			changeStatus = true;
-		} else if (mdy < y_lim * -1) {
-			isSkyNight = false;
-			changeStatus = true;
-		} else {
-			changeStatus = false;
-		}
 
 		if (mdx < x_lim * -1) {
 			moveRight = false;
@@ -102,7 +96,6 @@ document.ontouchmove = function (e) {
 
 		illust_border.style.width = 190 + md * scaleRatio + "px";
 		illust_border.style.height = 190 + md * scaleRatio + "px";
-
 
 	}
 }

@@ -60,7 +60,7 @@ function fillCountry() {
 		var text = document.createTextNode("#0" + (i + 1) + "<br>" + country[i].name);
 
 		el.innerHTML = "#0" + (i + 1) + "<br>" + country[i].name;
-		console.log(el);
+		// console.log(el);
 		countryNameWrap.appendChild(el);
 	}
 }
@@ -87,9 +87,9 @@ function fillPhoto() {
 
 
 		var photoNum = i + 1;
-		console.log("cityStatus : " + cityStatus);
+		// console.log("cityStatus : " + cityStatus);
 
-		console.log("photoNum : " + photoNum);
+		// console.log("photoNum : " + photoNum);
 		el_div.style.backgroundImage = "url(source/img/photo/" + (cityStatus + 1) + "/" + photoNum + ".jpg)"
 		el_li.appendChild(el_div);
 		photoList.appendChild(el_li);
@@ -137,7 +137,7 @@ function fillCitys() {
 		}
 		citys_wrap.appendChild(el_ul);
 	}
-	console.log(citys_wrap);
+	// console.log(citys_wrap);
 }
 
 // fill duration
@@ -218,11 +218,11 @@ window.onmousedown = function () {
 
 	if (Math.abs(dx) < 90 && Math.abs(dy) < 90) {
 		isOnIllust = true;
-		console.log("true");
+		// console.log("true");
 
 	} else {
 		isOnIllust = false;
-		console.log("false");
+		// console.log("false");
 	}
 }
 
@@ -373,7 +373,7 @@ function changeNight() {
 		sun[i].style.transform = "rotate(" + sundeg + "deg)";
 	}
 	changeStatus = !changeStatus;
-	console.log("changeStatus: " + changeStatus);
+	// console.log("changeStatus: " + changeStatus);
 
 	// change text COlor
 	var bg = document.querySelector(".fillBg");
@@ -402,7 +402,7 @@ function changeDay() {
 		sun[i].style.transform = "rotate(" + sundeg + "deg)";
 	}
 	changeStatus = !changeStatus;
-	console.log("changeStatus: " + changeStatus);
+	// console.log("changeStatus: " + changeStatus);
 
 	// change text COlor
 	var bg = document.querySelector(".fillBg");
