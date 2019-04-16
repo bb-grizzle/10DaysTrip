@@ -24,8 +24,8 @@ var croatia = {
 	citys: ["Dbrovnic", "Slano", "Split", "Zadar", "Zagreb"],
 	duration_start: "2019.01.02",
 	duration_end: "- 2019.01.11",
-	discript: "Croatia, officially the Republic of Croatia (Croatian: Republika Hrvatska, About this soundlisten is a country at the crossroads of Central and Southeast Europe, on the Adriatic Sea.",
-	discript_ko: "한국인이 거의 없고 아직까지 사람들이 많이 없는 곳. 한적하고 조용한 여행을 할 수 있어 좋았고 다시 한번 꼭 가보고 싶다. 여름에 가서 꼭 해수욕을 해야겠다고 다짐. 아쉽게도 음식은 짜고 짜고 짰다."
+	discript: "There are few Koreans and there are not many people yet. It was nice to have a quiet trip and I really want to go there again. I promised to go to the beach in the summer. Unfortunately, the food was salty, salty and salty.",
+	discript_ko: "한국인이 거의 없고 아직 사람들이 많이 없는 곳. 한적하고 조용한 여행을 할 수 있어 좋았고 꼭 다시 한 번 가보고 싶다. 여름에 가서 꼭 해수욕해야겠다고 다짐. 아쉽게도 음식은 짜고 짜고 짰다."
 
 }
 var switzerland = {
@@ -34,8 +34,8 @@ var switzerland = {
 	citys: ["Zurich", "Bern", "Interlaken", "Luzern", "Schwyz"],
 	duration_start: "2019.01.12",
 	duration_end: "- 2019.01.19",
-	discript: "Switzerland, officially the Swiss Confederation, is a country situated in western, central and southern Europe. It consists of 26 cantons, and the city of Bern is the seat of the federal authorities.",
-	discript_ko: "자유로운 슬로프에서 보드를 타는 것은 아주 인상 깊었다. 피눈물 나는 가격이지만 그만큼 감격적이기도 한 듯. 역시나 음식은 맛없다."
+	discript: "The slopes of the Swiss ski resort were the best slopes of life. It's a bloody price, but it's so touching. As expected, the food is not delicious.",
+	discript_ko: "스위스의 스키장 슬로프는 인생 최고의 슬로프였다. 피눈물 나는 가격이지만 그만큼 감격스러운 듯. 역시나 음식은 맛없다."
 }
 var italy = {
 	name: "Italy",
@@ -43,8 +43,8 @@ var italy = {
 	citys: ["Milano", "Venezia", "Firenze", "Roma", "Napoli"],
 	duration_start: "2019.01.20",
 	duration_end: "- 2019.02.01",
-	discript: "Italy, officially the Italian Republic, is a country in Europe. Located in the middle of the Mediterranean Sea, Italy shares open land borders with France, Switzerland, Austria, Slovenia and the enclaved microstates San Marino and Vatican City",
-	discript_ko: "신나게 유적을 봄. 걷는 걸 좋아하는 나로서는 아주 좋은 나라였다. 치안이 걱정 이였는데 생각보다 괜찮았다. 돈 많이 벌어서 쇼핑하러 오고 싶은 나라. 아마 다음 생. 여전히 음식은 맛 없다. "
+	discript: "a country where one can see historic sites and ruins with great excitement It was a great tourist attraction for me who liked to walk. I was worried about security, but it was better than I thought. I want to come to the country where I want to make a lot of money and go shopping. Maybe next life. The food is still bad.",
+	discript_ko: "신나게 유적과 유적을 볼 수 있는 나라. 걷는 걸 좋아하는 나로서는 아주 좋은 관광지였다. 치안이 걱정이었는데 생각보다 괜찮았고 돈 많이 벌어서 쇼핑하러 오고 싶은 나라. 아마 다음 생. 여전히 음식은 맛없다. "
 }
 var country = [croatia, switzerland, italy];
 
@@ -207,15 +207,14 @@ var center_w = screen_w / 2;
 var center_h = screen_h / 2;
 var y_lim = screen_h/4;
 var x_lim = screen_w/4;
-
+	
 window.onmousedown = function () {
 	var mouse_x = event.clientX;
 	var mouse_y = event.clientY;
 
 	var dx = (center_w - mouse_x);
 	var dy = (center_h - mouse_y);
-
-
+	
 	if (Math.abs(dx) < 90 && Math.abs(dy) < 90) {
 		isOnIllust = true;
 		// console.log("true");
@@ -226,7 +225,7 @@ window.onmousedown = function () {
 	}
 }
 
-	var moveRatio = 0.03;
+	var moveRatio = 0.015;
 
 	var dragRatio = 0.01;
 	var scaleRatio = 0.03;
@@ -264,14 +263,12 @@ window.onmousemove = function () {
 		} else {
 			document.body.style.cursor = "auto";
 		}
-
 	}
 
 
 	illust.style.left = 50 + dx * moveRatio * 0.5 + "%";
 	illust.style.top = 50 + dy * moveRatio * 0.5 + "%";
 
-	
 	if (isMouseDown) {
 		var illust_border = document.querySelector(".illust-border");
 		if (dy > y_lim) {
@@ -316,11 +313,9 @@ window.onmousemove = function () {
 		illustOverflow.style.height = "95%";
 
 		if (screen_w < 600) {
-
 			illust_border.style.width = "150px";
 			illust_border.style.height = "150px";
 		} else {
-
 			illust_border.style.width = "190px";
 			illust_border.style.height = "190px";
 		}
